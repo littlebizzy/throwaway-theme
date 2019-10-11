@@ -29,7 +29,9 @@ $option = array(
     'embed_size_h'                  => '600',
     'embed_size_w'                  => '', // NULL
     'gmt_offset'                    => '0', // 0 = GMT (UTC)
+    'hack_file'                     => '0', // legacy feature
     'home'                          => '', // pulled from ss-config
+    'html_type'                     => 'text/html',
     'large_size_h'                  => '1024',
     'large_size_w'                  => '1024',
     'medium_size_h'                 => '300',

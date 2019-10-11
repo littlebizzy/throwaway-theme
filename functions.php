@@ -6,7 +6,7 @@
 $option = array(
     'admin_email'                   => '', // pulled from ss-config
     'avatar_rating'                 => 'PG',
-    'avatar_default'                => 'mystery',
+    'avatar_default'                => 'mystery', // mystery man avatar (default)
     'blogdescription'               => '', // NULL
     'blogname'                      => '', // generated from the domain name in ss-config
     'category_base'                 => '/category',
@@ -49,10 +49,10 @@ $option = array(
     'thumbnail_size_h'              => '150',
     'thumbnail_size_w'              => '150',
     'time_format'                   => 'g:ia', // g:i a = 12:50 am
-    'timezone_string'               => '',
+    'timezone_string'               => '', // NULL (this option might overwrite gmt_offset)
     'uploads_use_yearmonth_folders' => '1',
-    'use_smilies'                   => ''
-    'use_trackback'                 => '',
+    'use_smilies'                   => '0'
+    'use_trackback'                 => '0',
     'users_can_register'            => '0',
 );
  

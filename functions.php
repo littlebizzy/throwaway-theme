@@ -4,41 +4,51 @@
 
 // set the options to change
 $option = array(
-    'admin_email'                   => '',
+    'admin_email'                   => '', // pulled from ss-config
     'avatar_rating'                 => 'PG',
     'avatar_default'                => 'mystery',
-    'blogdescription'               => '',
-    'blogname'                      => '',
+    'blogdescription'               => '', // NULL
+    'blogname'                      => '', // generated from the domain name in ss-config
     'category_base'                 => '/category',
     'close_comments_for_old_posts'  => '0',
     'close_comments_days_old'       => '90',
     'comment_max_links'             => '2',
     'comment_moderation'            => '1',
-    'comments_notify'               => '1',
     'comment_order'                 => 'asc',
     'comment_registration'          => '0',
     'comment_whitelist'             => '0',
+    'comments_notify'               => '1',
     'comments_per_page'             => '50',
-    'date_format'                   => 'M j, Y',
-    'default_comments_page'         => 'newest',
+    'date_format'                   => 'M j, Y', // M j, Y = Nov 6, 2010
     'default_comment_status'        => 'open',
+    'default_comments_page'         => 'newest',
     'default_ping_status'           => 'closed',
     'default_pingback_flag'         => '0',
     'default_role'                  => 'subscriber',
-    'gmt_offset'                    => 'GMT',
-    'home'                          => '',
+    'embed_autourls'                => '0', // disable automatic (oEmbed) social media embeds
+    'embed_size_h'                  => '600',
+    'embed_size_w'                  => '', // NULL
+    'gmt_offset'                    => '0', // 0 = GMT (UTC)
+    'home'                          => '', // pulled from ss-config
+    'large_size_h'                  => '1024',
+    'large_size_w'                  => '1024',
+    'medium_size_h'                 => '300',
+    'medium_size_w'                 => '300',
     'moderation_notify'             => '1',
     'page_comments'                 => '0',
     'permalink_structure'           => '/blog/%postname%/',
     'require_name_email'            => '1',
     'show_avatars'                  => '1',
     'show_comments_cookies_opt_in'  => '0',
-    'siteurl'                       => '',
-    'start_of_week'                 => '1',
+    'siteurl'                       => '', // pulled from ss-config
+    'start_of_week'                 => '1', // 1 = Monday
     'tag_base'                      => '/tag',
     'thread_comments'               => '0',
     'thread_comments_depth'         => '2',
-    'time_format'                   => 'g:ia',
+    'thumbnail_crop'                => '1',
+    'thumbnail_size_h'              => '150',
+    'thumbnail_size_w'              => '150',
+    'time_format'                   => 'g:ia', // g:i a = 12:50 am
     'timezone_string'               => '',
     'uploads_use_yearmonth_folders' => '1',
     'use_smilies'                   => ''

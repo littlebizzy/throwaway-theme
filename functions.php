@@ -40,6 +40,7 @@ $option = array(
     'page_comments'                 => '0',
     'permalink_structure'           => '/blog/%postname%/',
     'require_name_email'            => '1',
+    // 'secret'                     => '', // let WordPress generate the salts
     'show_avatars'                  => '1',
     'show_comments_cookies_opt_in'  => '0',
     'siteurl'                       => '', // pulled from ss-config
@@ -52,6 +53,8 @@ $option = array(
     'thumbnail_size_w'              => '150',
     'time_format'                   => 'g:ia', // g:i a = 12:50 am
     'timezone_string'               => '', // NULL (this option might overwrite gmt_offset)
+    // 'upload_path'                => '', // NULL
+    // 'upload_url_path'            => '', // NULL
     'uploads_use_yearmonth_folders' => '1',
     'use_smilies'                   => '0'
     'use_trackback'                 => '0',

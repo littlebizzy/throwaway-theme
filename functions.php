@@ -6,18 +6,14 @@
 $option = array(
     // 'active_plugins'                => '', // NULL
     'admin_email'                   => '@SITE_EMAIL', // pulled from ss-config during SlickStack installation
-    // 'advanced_edit'                 => '0',
-    // 'auto_core_update_notified'     => '1', // email the admin when WP core updates
-    'avatar_default'                => 'mystery', // mystery man avatar (WP Core default) if no avatar exists
+    'avatar_default'                => 'mystery', // mystery man avatar (WP Core default)
     'avatar_rating'                 => 'PG',
     'blacklist_keys'                => '', // NULL
     'blog_charset'                  => 'UTF-8', // should always be UTF-8
     'blog_public'                   => '1', // allow search engines to index the site
     'blogdescription'               => '', // NULL
     'blogname'                      => '@SITE_NAME', // pulled from ss-config during SlickStack installation
-    'can_compress_scripts'          => '1', // for WP Admin backend
     'category_base'                 => '/.', // remove category base
-    // 'category_children'             => '', // NULL
     'close_comments_days_old'       => '90',
     'close_comments_for_old_posts'  => '0', // keep comments open by default
     'comment_max_links'             => '2', // hold comments for moderation if they contain 2+ links
@@ -27,18 +23,11 @@ $option = array(
     'comment_whitelist'             => '0', // previously approved comments not required in order to be whitelisted
     'comments_notify'               => '1', // email the admin about new comments
     'comments_per_page'             => '50',
-    // 'cron'                          => '', // NULL = best to not mess with WP Cron settings directly
-    // 'current_theme'                 => '', // NULL = do not edit this during installation
     'date_format'                   => 'M j, Y', // M j, Y = Nov 6, 2010
-    'default_category'              => '1', // default posts category
     'default_comment_status'        => 'open',
     'default_comments_page'         => 'newest', // show newest comments on 1st page
-    'default_email_category'        => '1', // disabled on SlickStack
-    'default_link_category'         => '2', // disabled on SlickStack
     'default_ping_status'           => 'closed', // disable pingbacks (disabled on SlickStack)
     'default_pingback_flag'         => '0', // disable pingbacks (disabled on SlickStack)
-    'default_post_edit_rows'        => '10',
-    // 'default_post_format'           => '', // NULL
     'default_role'                  => 'subscriber',
     'embed_autourls'                => '0', // disable automatic (oEmbed) social media embeds
     'embed_size_h'                  => '600', // embed media height = 600px
@@ -67,16 +56,14 @@ $option = array(
     'moderation_keys'               => '', // NULL
     'moderation_notify'             => '1', // email the admin when comments need moderation
     'page_comments'                 => '0', // disable paged comments by default
-    // 'page_on_front'                 => '', // NULL
     'page_for_posts'                => '0',
-    'permalink_structure'           => '/blog/%postname%/',
+    // 'page_on_front'                 => '', // NULL = it depends
+    'permalink_structure'           => '/%category%/%postname%', // perfect for custom post types and taxonomies
     'ping_sites'                    => '', // NULL
     'posts_per_page'                => '10',
     'posts_per_rss'                 => '10',
     'require_name_email'            => '1', // comment authors must include their name and email address
-    'rss_language'                  => 'en',
     'rss_use_excerpt'               => '1', // encourage RSS subscribers to visit your website
-    // 'secret'                        => '', // let WordPress generate the salts
     'show_avatars'                  => '1', // enable comment avatars
     'show_comments_cookies_opt_in'  => '0', // disable the opt-in warning for comment cookies (avoid GDPR bloat)
     /'show_on_front'                 => 'page', // depends on page_on_front
@@ -91,7 +78,7 @@ $option = array(
     'thumbnail_size_h'              => '150', // image thumbnails height = 150px
     'thumbnail_size_w'              => '150', // image thumbnails width = 150px
     'time_format'                   => 'g:ia', // g:i a = 12:50 am
-    'timezone_string'               => '', // NULL (this option might overwrite gmt_offset)
+    'timezone_string'               => '', // NULL (e.g. UTC but might overwrite gmt_offset)
     'upload_path'                   => '', // NULL (overruled by wp-config constants when using SlickStack)
     'upload_url_path'               => '', // NULL (overruled by wp-config constants when using SlickStack)
     'uploads_use_yearmonth_folders' => '1',
@@ -103,7 +90,7 @@ $option = array(
 );
 
 // delete these options: links_updated_date_format, links_recently_updated_prepend, links_recently_updated_append, 
-// links_recently_updated_time, use_linksupdate
+// links_recently_updated_time, use_linksupdate, default_email_category, default_link_category
  
 // update wp_options table
 foreach ( $option as $key => $value ) {  

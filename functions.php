@@ -1,10 +1,7 @@
 <?php
-// Ref: https://training.ithemes.com/webinar/hardcoding-the-wordpress-setup-process/
-// Ref: https://codex.wordpress.org/Option_Reference
 
 // set the options to change
 $option = array(
-    // 'active_plugins'                => '', // NULL
     'admin_email'                   => '@SITE_EMAIL', // pulled from ss-config during SlickStack installation
     'avatar_default'                => 'mystery', // mystery man avatar (WP Core default)
     'avatar_rating'                 => 'PG',
@@ -66,7 +63,7 @@ $option = array(
     'rss_use_excerpt'               => '1', // encourage RSS subscribers to visit your website
     'show_avatars'                  => '1', // enable comment avatars
     'show_comments_cookies_opt_in'  => '0', // disable the opt-in warning for comment cookies (avoid GDPR bloat)
-    /'show_on_front'                 => 'page', // depends on page_on_front
+    'show_on_front'                 => 'page', // depends on page_on_front
     'sidebars_widgets'              => '', // NULL
     'site_icon'                     => '0', // disabled by default
     'siteurl'                       => 'https://@SITE_DOMAIN', // pulled from ss-config during SlickStack installation
@@ -89,9 +86,6 @@ $option = array(
     'WPLANG'                        => '@WP_LANG', // default language
 );
 
-// delete these options: links_updated_date_format, links_recently_updated_prepend, links_recently_updated_append, 
-// links_recently_updated_time, use_linksupdate, default_email_category, default_link_category
- 
 // update wp_options table
 foreach ( $option as $key => $value ) {  
     update_option( $key, $value );
@@ -101,7 +95,7 @@ foreach ( $option as $key => $value ) {
 global $wp_rewrite;
 $wp_rewrite->flush_rules();
  
-// delete the default comment, post and page
+// delete the default comment, post, and page
 wp_delete_comment( 1 );
 wp_delete_post( 1, TRUE );
 wp_delete_post( 2, TRUE );
@@ -110,10 +104,10 @@ wp_delete_post( 2, TRUE );
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // activate bundled plugins
-// activate_plugin( 'wp-super-cache/wp-cache.php' );
-// activate_plugin( 'wordpress-seo/wp-seo.php' );
+// activate_plugin( 'inline-styles/inline-styles.php' );
+// activate_plugin( 'seo-genius/seo-genius.php' );
  
 // switch the theme
-// switch_theme( 'builder' );
+// switch_theme( 'twentyfifteen' );
  
 ?>

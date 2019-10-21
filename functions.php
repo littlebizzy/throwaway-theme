@@ -103,7 +103,7 @@ wp_delete_post( 1, TRUE );
 wp_delete_post( 2, TRUE );
  
 // we need to include the file below because the activate_plugin() function isn't normally defined in the front-end
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+// include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // activate bundled plugins
 // activate_plugin( 'inline-styles/inline-styles.php' );

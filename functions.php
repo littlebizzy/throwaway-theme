@@ -1,6 +1,8 @@
 <?php
 
-// set the options to change
+// code inspired by iThemes: https://ithemes.com/how-to-hardcode-the-wordpress-setup-process/
+
+// set the desired options to change
 $option = array(
     'admin_email'                   => '@SITE_EMAIL', // pulled from ss-config during SlickStack installation
     'avatar_default'                => 'mystery', // mystery man avatar (WP Core default)
@@ -106,6 +108,9 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 // activate bundled plugins
 // activate_plugin( 'inline-styles/inline-styles.php' );
 // activate_plugin( 'seo-genius/seo-genius.php' );
+
+// flush the object cache for good measure
+wp_cache_flush(); 
  
 // switch the theme
 // switch_theme( 'twentyfifteen' );

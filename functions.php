@@ -4,14 +4,14 @@
 
 // set the desired options to change
 $option = array(
-    'admin_email'                   => '@SITE_EMAIL', // pulled from ss-config during SlickStack installation
+    'admin_email'                   => '', // NULL
     'avatar_default'                => 'mystery', // mystery man avatar (WP Core default)
     'avatar_rating'                 => 'PG',
     'blacklist_keys'                => '', // NULL
     'blog_charset'                  => 'UTF-8', // should always be UTF-8
     'blog_public'                   => '1', // allow search engines to index the site
     'blogdescription'               => '', // NULL
-    'blogname'                      => '@SITE_NAME', // pulled from ss-config during SlickStack installation
+    'blogname'                      => '', // NULL
     'category_base'                 => '/.', // remove category base
     'close_comments_days_old'       => '90',
     'close_comments_for_old_posts'  => '0', // keep comments open by default
@@ -25,8 +25,8 @@ $option = array(
     'date_format'                   => 'M j, Y', // M j, Y = Nov 6, 2010
     'default_comment_status'        => 'open',
     'default_comments_page'         => 'newest', // show newest comments on 1st page
-    'default_ping_status'           => 'closed', // disable pingbacks (disabled on SlickStack)
-    'default_pingback_flag'         => '0', // disable pingbacks (disabled on SlickStack)
+    'default_ping_status'           => 'closed', // disable pingbacks
+    'default_pingback_flag'         => '0', // disable pingbacks
     'default_role'                  => 'subscriber',
     'embed_autourls'                => '0', // disable automatic (oEmbed) social media embeds
     'embed_size_h'                  => '600', // embed media height = 600px
@@ -36,7 +36,6 @@ $option = array(
     'gmt_offset'                    => '0', // 0 = GMT (UTC)
     'gzipcompression'               => '0', // disable Gzip in WP (PHP) and let the server handle it
     'hack_file'                     => '0', // legacy feature
-    'home'                          => 'https://@SITE_DOMAIN', // pulled from ss-config during SlickStack installation
     'html_type'                     => 'text/html',
     'image_default_align'           => 'none', // disable image alignment by default
     'image_default_link_type'       => 'none', // disable image links by default
@@ -62,30 +61,28 @@ $option = array(
     'posts_per_page'                => '10',
     'posts_per_rss'                 => '10',
     'require_name_email'            => '1', // comment authors must include their name and email address
-    'rss_use_excerpt'               => '1', // encourage RSS subscribers to visit your website
+    'rss_use_excerpt'               => '1', // encourage RSS subscribers to click through excerpts
     'show_avatars'                  => '1', // enable comment avatars
     'show_comments_cookies_opt_in'  => '0', // disable the opt-in warning for comment cookies (avoid GDPR bloat)
     'show_on_front'                 => 'page', // depends on page_on_front
     'sidebars_widgets'              => '', // NULL
     'site_icon'                     => '0', // disabled by default
-    'siteurl'                       => 'https://@SITE_DOMAIN', // pulled from ss-config during SlickStack installation
     'start_of_week'                 => '1', // 1 = Monday
     'tag_base'                      => '/tag',
     'thread_comments'               => '1', // enable threaded comments
-    'thread_comments_depth'         => '2', // depth of comment threads = 2 levels (similar with Facebook, YouTube, etc)
+    'thread_comments_depth'         => '2', // depth of comment threads = 2 levels (similar to Facebook, YouTube, etc)
     'thumbnail_crop'                => '1', // crop image thumbnails to exact dimensions (not proportional)
     'thumbnail_size_h'              => '150', // image thumbnails height = 150px
     'thumbnail_size_w'              => '150', // image thumbnails width = 150px
     'time_format'                   => 'g:ia', // g:i a = 12:50 am
     'timezone_string'               => '', // NULL (e.g. UTC but might overwrite gmt_offset)
-    'upload_path'                   => '', // NULL (overruled by wp-config constants when using SlickStack)
-    'upload_url_path'               => '', // NULL (overruled by wp-config constants when using SlickStack)
+    'upload_path'                   => '', // NULL
+    'upload_url_path'               => '', // NULL
     'uploads_use_yearmonth_folders' => '1',
     'use_balanceTags'               => '0', // disable XHTML corrections
     'use_smilies'                   => '0', // disable emojis
     'use_trackback'                 => '0', // disable trackbacks
     'users_can_register'            => '0', // disable new user (guest) registrations by default
-    'WPLANG'                        => '@WP_LANG', // default language
 );
 
 // update wp_options table
@@ -106,13 +103,12 @@ wp_delete_post( 2, TRUE );
 // include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // activate bundled plugins
-// activate_plugin( 'inline-styles/inline-styles.php' );
 // activate_plugin( 'seo-genius/seo-genius.php' );
+ 
+// switch the theme
+switch_theme( 'twentynineteen' );
 
 // flush the object cache for good measure
 wp_cache_flush(); 
- 
-// switch the theme
-// switch_theme( 'twentyfifteen' );
  
 ?>

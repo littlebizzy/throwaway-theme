@@ -98,17 +98,11 @@ $wp_rewrite->flush_rules();
 wp_delete_comment( 1 );
 wp_delete_post( 1, TRUE );
 wp_delete_post( 2, TRUE );
- 
-// we need to include the file below because the activate_plugin() function isn't normally defined in the front-end
-// include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-// activate bundled plugins
-// activate_plugin( 'seo-genius/seo-genius.php' );
- 
-// switch the theme
-switch_theme( 'twentynineteen' );
-
-// flush the object cache for good measure
+// flush object cache for good measure
 wp_cache_flush(); 
  
+// switch the theme
+switch_theme( 'starter' );
+
 ?>

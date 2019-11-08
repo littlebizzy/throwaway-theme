@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.2.1
+* switches theme to `starter` by LittleBizzy
+* `wp_cache_flush` now before switch theme function
+* removed plugin activation snippets
+
 ### 1.2.0
 * removed SlickStack-specific placeholders (more universal now)
 * removed `home` and `siteurl` options (WordPress Core will auto-guess them)

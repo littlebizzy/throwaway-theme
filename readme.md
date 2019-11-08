@@ -3,7 +3,7 @@
 A throwaway default theme created for SlickStack servers to delete WP Core junk and prepare cleaner WordPress installations (inspired by iThemes).
 
 * [Theme Homepage](https://www.littlebizzy.com/themes/throwaway)
-* [Download Latest Version (ZIP)](https://github.com/littlebizzy/throwaway-theme/archive/v1.2.0.zip)
+* [Download Latest Version (ZIP)](https://github.com/littlebizzy/throwaway-theme/archive/v1.2.1.zip)
 * [**Become A LittleBizzy.com Member Today!**](https://www.littlebizzy.com/members)
 
 ### Defined Constants
